@@ -83,6 +83,7 @@ class Head(nn.Module):
     def forward(self, x):
         B,T,C = x.shape     # here C == head_size
 
+ 
         k = self.key(x) # (B, T, head_size)
         q = self.query(x) # (B, T, head_size)
 
